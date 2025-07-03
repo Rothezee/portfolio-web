@@ -1,6 +1,6 @@
 import { GitHubRepo, GitHubUser, GitHubLanguages } from '@/types/github'
 
-const GITHUB_USERNAME = 'rothezee' // Cambia esto por tu username de GitHub
+const GITHUB_USERNAME = 'rothezee' // Replace with your GitHub username
 const GITHUB_API_BASE = 'https://api.github.com'
 
 class GitHubService {
