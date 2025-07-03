@@ -9,4 +9,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: '/portfolio-web/', // Cambia esto por el nombre de tu repositorio
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
 })
