@@ -28,8 +28,6 @@ function App() {
             <Skills />
             <Timeline />
             <Portfolio />
-            <Blog />
-            <Testimonials />
             <Contact />
             <Footer />
           </motion.div>
