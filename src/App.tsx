@@ -5,7 +5,10 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
+import Timeline from './components/Timeline'
 import Portfolio from './components/Portfolio'
+import Blog from './components/Blog'
+import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -23,7 +26,10 @@ function App() {
             <Hero />
             <About />
             <Skills />
+            <Timeline />
             <Portfolio />
+            <Blog />
+            <Testimonials />
             <Contact />
             <Footer />
           </motion.div>

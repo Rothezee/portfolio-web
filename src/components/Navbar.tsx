@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,7 +20,10 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Timeline', href: '#timeline' },
     { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Blog', href: '#blog' },
+    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -48,21 +52,22 @@ const Navbar = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
                 href={item.href}
                 whileHover={{ y: -2 }}
-                className="text-dark-300 hover:text-primary-500 transition-colors duration-200 font-medium"
+                className="text-dark-300 hover:text-primary-500 transition-colors duration-200 font-medium text-sm"
               >
                 {item.name}
               </motion.a>
             ))}
           </div>
 
-          {/* Social Links */}
+          {/* Theme Toggle & Social Links */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             {socialLinks.map((link) => (
               <motion.a
                 key={link.label}
@@ -81,7 +86,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-dark-300 hover:text-primary-500 transition-colors duration-200"
+            className="lg:hidden text-dark-300 hover:text-primary-500 transition-colors duration-200"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -92,7 +97,7 @@ const Navbar = () => {
         <motion.div
           initial={false}
           animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
-          className="md:hidden overflow-hidden"
+          className="lg:hidden overflow-hidden"
         >
           <div className="pt-4 pb-2 space-y-2">
             {navItems.map((item) => (
@@ -105,19 +110,22 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <div className="flex items-center space-x-4 pt-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dark-400 hover:text-primary-500 transition-colors duration-200"
-                  aria-label={link.label}
-                >
-                  <link.icon size={20} />
-                </a>
-              ))}
+            <div className="flex items-center justify-between pt-4">
+              <div className="flex items-center space-x-4">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-dark-400 hover:text-primary-500 transition-colors duration-200"
+                    aria-label={link.label}
+                  >
+                    <link.icon size={20} />
+                  </a>
+                ))}
+              </div>
+              <ThemeToggle />
             </div>
           </div>
         </motion.div>
