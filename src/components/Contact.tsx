@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, Twitter, Clock, CheckCircle } from 'lucide-react'
 import toast from 'react-hot-toast'
 
 const Contact = () => {
@@ -171,6 +171,30 @@ const Contact = () => {
                 ))}
               </div>
 
+              {/* Quick Stats */}
+              <motion.div 
+                variants={itemVariants}
+                className="card bg-gradient-to-br from-primary-500/10 to-primary-600/5 border-primary-500/20"
+              >
+                <h4 className="text-xl font-semibold text-dark-100 mb-4">Quick Response</h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <Clock className="text-primary-500" size={20} />
+                      <div className="text-2xl font-bold text-primary-500">< 24h</div>
+                    </div>
+                    <div className="text-sm text-dark-400">Response Time</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <CheckCircle className="text-primary-500" size={20} />
+                      <div className="text-2xl font-bold text-primary-500">100%</div>
+                    </div>
+                    <div className="text-sm text-dark-400">Reply Rate</div>
+                  </div>
+                </div>
+              </motion.div>
+
               {/* Social Links */}
               <div>
                 <h4 className="text-xl font-semibold text-dark-100 mb-4">Follow Me</h4>
@@ -285,22 +309,6 @@ const Contact = () => {
               </form>
             </motion.div>
           </div>
-
-          {/* Map */}
-          <motion.div variants={itemVariants} className="mt-16">
-            <div className="card p-0 overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.8571504724897!2d-66.33080493911613!3d-33.29357464277445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sar!4v1723680874239!5m2!1sen!2sar"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-96 rounded-xl"
-              />
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
