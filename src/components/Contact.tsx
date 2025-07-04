@@ -181,7 +181,7 @@ const Contact = () => {
                   <div className="text-center">
                     <div className="flex items-center justify-center gap-2 mb-2">
                       <Clock className="text-primary-500" size={20} />
-                      <div className="text-2xl font-bold text-primary-500">< 24h</div>
+                      <div className="text-2xl font-bold text-primary-500">{"< 24h"}</div>
                     </div>
                     <div className="text-sm text-dark-400">Response Time</div>
                   </div>
