@@ -6,7 +6,7 @@ Este repositorio contiene el código fuente de mi portafolio web personal. Aquí
 
 - **React**: Para la construcción de la interfaz de usuario.
 - **JavaScript**: Lenguaje principal de programación.
-- **CSS/SCSS**: Estilos personalizados responsivos.
+- **Tailwind, CSS/SCSS**: Estilos personalizados responsivos.
 - **Vite** o **Create React App** (dependiendo de la configuración inicial).
 - **Otros**: Puedes listar otras librerías o frameworks relevantes que utilices, como Framer Motion, React Router, Styled Components, etc.
 
@@ -33,6 +33,7 @@ portfolio-web/
 - Diseño responsivo para dispositivos móviles y escritorio.
 - Animaciones y transiciones suaves.
 - Fácil de personalizar y escalar.
+- Coneccion con repositorios de GitHub
 
 ## 🔧 Instalación y uso
 
