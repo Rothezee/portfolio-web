@@ -69,7 +69,7 @@ Este proyecto puede ser desplegado fácilmente en plataformas como **Vercel**, *
 Puedes modificar el contenido y los estilos en los archivos dentro de la carpeta `src` para adaptarlo a tu perfil y tus proyectos.
 
 ## 📎Pagina Web
-https://rothezee.github.io/portfolio-web/    
+- https://rothezee.github.io/portfolio-web/   
 
 ## 📄 Licencia
 
